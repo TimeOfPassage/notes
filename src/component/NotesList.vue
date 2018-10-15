@@ -45,6 +45,86 @@ export default {
 				id: 5,
 				title: 'this is title',
 				content: '西安面馆'
+			},{
+				id: 1,
+				title: 'this is title',
+				content: 'this is content'
+			},{
+				id: 2,
+				title: 'this is title',
+				content: '美味的额午餐'
+			},{
+				id: 3,
+				title: 'this is title',
+				content: '丰盛的午餐'
+			},{
+				id: 4,
+				title: 'this is title',
+				content: '难吃的午餐'
+			},{
+				id: 5,
+				title: 'this is title',
+				content: '西安面馆'
+			},{
+				id: 1,
+				title: 'this is title',
+				content: 'this is content'
+			},{
+				id: 2,
+				title: 'this is title',
+				content: '美味的额午餐'
+			},{
+				id: 3,
+				title: 'this is title',
+				content: '丰盛的午餐'
+			},{
+				id: 4,
+				title: 'this is title',
+				content: '难吃的午餐'
+			},{
+				id: 5,
+				title: 'this is title',
+				content: '西安面馆'
+			},{
+				id: 1,
+				title: 'this is title',
+				content: 'this is content'
+			},{
+				id: 2,
+				title: 'this is title',
+				content: '美味的额午餐'
+			},{
+				id: 3,
+				title: 'this is title',
+				content: '丰盛的午餐'
+			},{
+				id: 4,
+				title: 'this is title',
+				content: '难吃的午餐'
+			},{
+				id: 5,
+				title: 'this is title',
+				content: '西安面馆'
+			},{
+				id: 1,
+				title: 'this is title',
+				content: 'this is content'
+			},{
+				id: 2,
+				title: 'this is title',
+				content: '美味的额午餐'
+			},{
+				id: 3,
+				title: 'this is title',
+				content: '丰盛的午餐'
+			},{
+				id: 4,
+				title: 'this is title',
+				content: '难吃的午餐'
+			},{
+				id: 5,
+				title: 'this is title',
+				content: '西安面馆'
 			}]
 		}
 	},
@@ -76,18 +156,18 @@ export default {
 </script>
 <style lang="scss">
 	.noteslist{
-		position: absolute;
-		top: 0;
-		left: 58px;
-		bottom: 0;
 		background: #fff;
 		width: 228px;
+		position: absolute;
+		top:0;
+		left:56px;
+		bottom:0;
+		height:100%;
 		border-right:1px solid #ccc;
 		.title{
 			width: 100%;
-			height: 15%;
-			min-height: 120px;
-			padding-top:30px;
+			height:18%;
+			padding-top:40px;
 			.head{
 				text-align:center;
 				font-size:18px;
@@ -113,10 +193,8 @@ export default {
 		}
 		.body{
 			width:100%;
-			cursor:pointer;
-			height:85%;
+			height:82%;
 			overflow: hidden;
-			background:#fff;
 			overflow-y: auto;
 			.recordRow{
 				width:100%;

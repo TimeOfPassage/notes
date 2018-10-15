@@ -1,7 +1,7 @@
 <template>
 	<div class="toolbar">
-		<div>
-			+
+		<div class="item">
+			<font-icon id="icon-plus"></font-icon>
 		</div>
 	</div>
 </template>
@@ -25,9 +25,17 @@ export default {
 		background: #2e414f;
 		width: 58px;
 		color: #fff;
-		div{
+		.item{
+			width:100%;
+			line-height: 58px;
 			text-align: center;
-			font-size: 18px;
+			i{
+				font-size: 30px;
+			}
+		}
+		.item:hover{
+			background:rgba(45,55,10,1);
+			cursor: pointer;
 		}
 	}
 </style>
