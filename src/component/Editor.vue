@@ -1,6 +1,6 @@
 <template>
-	<div class="editor">
-		<textarea class="editorArea" v-model="content"></textarea>
+	<div class="editor" v-model="content" hidefocus="true" contenteditable="true">
+		
 	</div>
 </template>
 
@@ -20,12 +20,8 @@ export default {
 		margin-left:286px;
 		height:100%;
 		background: #fff;
-		.editorArea{
-			width:100%;
-			height:99.6%;
-			padding:15px;
-			border:0;
-			border-radius: 0;
-		}
+		outline:0;
+		padding:15px;
+		font-size:16px;
 	}
 </style>

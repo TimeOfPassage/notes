@@ -85,9 +85,9 @@ export default {
 		border-right:1px solid #ccc;
 		.title{
 			width: 100%;
-			height: 20%;
+			height: 15%;
+			min-height: 120px;
 			padding-top:30px;
-			padding-bottom:10px;
 			.head{
 				text-align:center;
 				font-size:18px;
@@ -114,7 +114,7 @@ export default {
 		.body{
 			width:100%;
 			cursor:pointer;
-			height:80%;
+			height:85%;
 			overflow: hidden;
 			background:#fff;
 			overflow-y: auto;
