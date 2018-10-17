@@ -72,8 +72,8 @@ export default {
 		border-right:1px solid #ccc;
 		.title{
 			width: 100%;
-			height:18%;
-			padding-top:40px;
+			height:100px;
+			padding-top:10px;
 			.head{
 				text-align:center;
 				font-size:18px;
@@ -98,8 +98,11 @@ export default {
 			}
 		}
 		.body{
+			position: absolute;
 			width:100%;
-			height:82%;
+			bottom:0;
+			top:100px;
+			left:0;
 			overflow: hidden;
 			overflow-y: auto;
 			.recordRow{

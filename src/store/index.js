@@ -13,6 +13,54 @@ export default new Vuex.Store({
 			id: 2,
 			title: '测试标题2',
 			content: '测试内容2'
+		}, {
+			id: 1,
+			title: '测试标题',
+			content: '测试内容'
+		}, {
+			id: 2,
+			title: '测试标题2',
+			content: '测试内容2'
+		}, {
+			id: 1,
+			title: '测试标题',
+			content: '测试内容'
+		}, {
+			id: 2,
+			title: '测试标题2',
+			content: '测试内容2'
+		}, {
+			id: 1,
+			title: '测试标题',
+			content: '测试内容'
+		}, {
+			id: 2,
+			title: '测试标题2',
+			content: '测试内容2'
+		}, {
+			id: 1,
+			title: '测试标题',
+			content: '测试内容'
+		}, {
+			id: 2,
+			title: '测试标题2',
+			content: '测试内容2'
+		}, {
+			id: 1,
+			title: '测试标题',
+			content: '测试内容'
+		}, {
+			id: 2,
+			title: '测试标题2',
+			content: '测试内容2'
+		}, {
+			id: 1,
+			title: '测试标题',
+			content: '测试内容'
+		}, {
+			id: 2,
+			title: '测试标题2',
+			content: '测试内容2'
 		}],
 		curNotes: {
 			id: 1,
