@@ -12,7 +12,7 @@
 			</div>
 		</div>
 		<div class="body">
-			<div class="recordRow" v-for="(item,index) of notes" :key="index" @click="selectRecord">
+			<div class="recordRow" v-for="(item,index) of getNotesList" :key="index" @click="selectRecord">
 				{{item.title}} - {{item.content}}
 			</div>
 		</div>
@@ -20,112 +20,17 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
 	name: 'NotesList',
 	data() {
 		return {
-			isSelect: true,
-			notes: [{
-				id: 1,
-				title: 'this is title',
-				content: 'this is content'
-			},{
-				id: 2,
-				title: 'this is title',
-				content: '美味的额午餐'
-			},{
-				id: 3,
-				title: 'this is title',
-				content: '丰盛的午餐'
-			},{
-				id: 4,
-				title: 'this is title',
-				content: '难吃的午餐'
-			},{
-				id: 5,
-				title: 'this is title',
-				content: '西安面馆'
-			},{
-				id: 1,
-				title: 'this is title',
-				content: 'this is content'
-			},{
-				id: 2,
-				title: 'this is title',
-				content: '美味的额午餐'
-			},{
-				id: 3,
-				title: 'this is title',
-				content: '丰盛的午餐'
-			},{
-				id: 4,
-				title: 'this is title',
-				content: '难吃的午餐'
-			},{
-				id: 5,
-				title: 'this is title',
-				content: '西安面馆'
-			},{
-				id: 1,
-				title: 'this is title',
-				content: 'this is content'
-			},{
-				id: 2,
-				title: 'this is title',
-				content: '美味的额午餐'
-			},{
-				id: 3,
-				title: 'this is title',
-				content: '丰盛的午餐'
-			},{
-				id: 4,
-				title: 'this is title',
-				content: '难吃的午餐'
-			},{
-				id: 5,
-				title: 'this is title',
-				content: '西安面馆'
-			},{
-				id: 1,
-				title: 'this is title',
-				content: 'this is content'
-			},{
-				id: 2,
-				title: 'this is title',
-				content: '美味的额午餐'
-			},{
-				id: 3,
-				title: 'this is title',
-				content: '丰盛的午餐'
-			},{
-				id: 4,
-				title: 'this is title',
-				content: '难吃的午餐'
-			},{
-				id: 5,
-				title: 'this is title',
-				content: '西安面馆'
-			},{
-				id: 1,
-				title: 'this is title',
-				content: 'this is content'
-			},{
-				id: 2,
-				title: 'this is title',
-				content: '美味的额午餐'
-			},{
-				id: 3,
-				title: 'this is title',
-				content: '丰盛的午餐'
-			},{
-				id: 4,
-				title: 'this is title',
-				content: '难吃的午餐'
-			},{
-				id: 5,
-				title: 'this is title',
-				content: '西安面馆'
-			}]
+			isSelect: true
+		}
+	},
+	computed: {
+		getNotesList () {
+			return this.$store.getters.getNotesList
 		}
 	},
 	methods: {

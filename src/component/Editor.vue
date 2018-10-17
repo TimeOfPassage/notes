@@ -1,15 +1,15 @@
 <template>
-	<div class="editor" v-model="content" hidefocus="true" contenteditable="true">
-		
+	<div class="editor" hidefocus="true" contenteditable="true">
+		{{getContent}}
 	</div>
 </template>
 
 <script>
 export default {
 	name: 'Editor',
-	data() {
-		return {
-			content: 'aaaa'
+	computed: {
+		getContent () {
+			return this.$store.getters.getNotesById(1)
 		}
 	}
 }
