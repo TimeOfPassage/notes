@@ -12,7 +12,7 @@
 			</div>
 		</div>
 		<div class="body">
-			<div class="recordRow" v-for="(item,index) of getNotesList" :key="index" @click="selectRecord">
+			<div class="recordRow" v-for="(item,index) of getNotesList" :key="index" @click="selectRecord(item.id,$event)">
 				{{item.title}} - {{item.content}}
 			</div>
 		</div>
@@ -41,12 +41,13 @@ export default {
 				this.isSelect = true;
 			}
 		},
-		selectRecord: function(e){
+		selectRecord: function(id,e){
 			var eNodes = this.siblings(e.target);
 			for(var node of eNodes){
 				node.classList.remove('selected');
 			}
 			e.target.classList.add('selected');
+			this.$store.commit('notesSelectChange',id);
 		},
 		siblings: function(elm) {
 			var a = [];

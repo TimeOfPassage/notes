@@ -9,7 +9,7 @@ export default {
 	name: 'Editor',
 	computed: {
 		getContent () {
-			return this.$store.getters.getNotesById(1)
+			return this.$store.getters.getCurNotes
 		}
 	}
 }

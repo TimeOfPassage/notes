@@ -13,19 +13,24 @@ export default new Vuex.Store({
 			id: 2,
 			title: '测试标题2',
 			content: '测试内容2'
-		}]
+		}],
+		curNotes: {
+			id: 1,
+			title: '测试标题',
+			content: '测试内容'
+		}
 	},
 	mutations: {
-		increment(state) {
-			state.count++
+		notesSelectChange(state, id) {
+			state.curNotes = state.notes.find(notes => notes.id === id)
 		}
 	},
 	getters: {
 		getNotesList: state => {
 			return state.notes
 		},
-		getNotesById: (state) => (id) => {
-			return state.notes.find(notes => notes.id === id)
+		getCurNotes: (state) => {
+			return state.curNotes
 		}
 	}
 });
