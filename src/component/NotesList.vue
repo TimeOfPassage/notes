@@ -13,7 +13,7 @@
 		</div>
 		<div class="body">
 			<div class="recordRow" v-for="(item,index) of getNotesList" :key="index" :class="item.isSelect?'selected':''" @click="selectRecord(item.id)">
-				{{item.title}}
+				{{item.title.substr(0,15) }}
 			</div>
 		</div>
 	</div>
@@ -30,13 +30,7 @@ export default {
 	},
 	computed: {
 		getNotesList () {
-			let notes = this.$store.getters.getNotesList;
-			notes.find(notes => {
-				if(notes.title != null && notes.title.length > 15){
-					notes.title = notes.title.substr(0,15).trim() + '...';
-				}
-			})
-			return notes
+			return this.$store.getters.getNotesList
 		}
 	},
 	methods: {

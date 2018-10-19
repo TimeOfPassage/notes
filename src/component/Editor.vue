@@ -4,7 +4,9 @@
 			<input type="text" v-model="getContent.title" hidefocus="true" />
 		</h4>
 		<hr/>
-		{{getContent.content}}
+		<div>
+			{{getContent.content}}
+		</div>
 	</div>
 </template>
 
