@@ -12,8 +12,8 @@
 			</div>
 		</div>
 		<div class="body">
-			<div class="recordRow" v-for="(item,index) of getNotesList" :key="index" @click="selectRecord(item.id,$event)">
-				{{item.title}} - {{item.content}}
+			<div class="recordRow" v-for="(item,index) of getNotesList" :key="index" :class="item.isSelect?'selected':''" @click="selectRecord(item.id)">
+				{{item.title}}
 			</div>
 		</div>
 	</div>
@@ -30,7 +30,13 @@ export default {
 	},
 	computed: {
 		getNotesList () {
-			return this.$store.getters.getNotesList
+			let notes = this.$store.getters.getNotesList;
+			notes.find(notes => {
+				if(notes.title != null && notes.title.length > 15){
+					notes.title = notes.title.substr(0,15).trim() + '...';
+				}
+			})
+			return notes
 		}
 	},
 	methods: {
@@ -42,12 +48,7 @@ export default {
 			}
 		},
 		selectRecord: function(id,e){
-			var eNodes = this.siblings(e.target);
-			for(var node of eNodes){
-				node.classList.remove('selected');
-			}
-			e.target.classList.add('selected');
-			this.$store.commit('notesSelectChange',id);
+			this.$store.commit('selectSingleNotes',id);
 		},
 		siblings: function(elm) {
 			var a = [];
