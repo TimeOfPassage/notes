@@ -23,11 +23,27 @@ export default new Vuex.Store({
 		}
 	},
 	mutations: {
+		addNewNotes(state){
+			//初始化位置
+			state.notes.map(item => {
+				item.id++
+				item.isSelect = false
+			})
+			let newItem = {
+				id:1,
+				title: 'New Item',
+				content:'New Content',
+				isSelect: true
+			}
+			this.commit('selectSingleNotes',1)
+			state.curNotes = newItem
+			state.notes.unshift(newItem)
+		},
 		selectSingleNotes(state, id) {
 			state.notes.find(notes => {
 				if (notes.id == id) {
 					notes.isSelect = true
-					state.curNotes = notes;
+					state.curNotes = notes
 				} else {
 					notes.isSelect = false
 				}

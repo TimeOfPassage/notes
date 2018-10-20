@@ -1,12 +1,12 @@
 <template>
-	<div class="editor" hidefocus="true" contenteditable="true">
-		<h4 @keyup="handleKeyUp">
-			<input type="text" v-model="getContent.title" hidefocus="true" />
-		</h4>
-		<hr/>
-		<div>
+	<div class="editor">
+		<title class="title" @keyup="handleKeyUp">
+			<input type="text" v-model="getContent.title" value="sfsdfdsf" hidefocus="true" />
+		</title>
+		<hr>
+		<content class="content" contenteditable="true">
 			{{getContent.content}}
-		</div>
+		</content>
 	</div>
 </template>
 
@@ -46,12 +46,27 @@ export default {
 		font-size:16px;
 		overflow: hidden;
 		overflow-y: auto;
-		input{
-			outline:0;
-			border:0;
+		.title{
+			width:auto;
+			height:40px;
+			background:#ccc;
+			display: block;
+			input{
+				outline:0;
+				border:0;
+				width:100%;
+				height:100%;
+				font-weight:bold;
+			}
+		}
+		hr{
+			margin-top:0px;
+		}
+		.content{
 			width:100%;
 			height:100%;
-			font-weight:bold;
+			outline:0;
+			border:0;
 		}
 	}
 </style>

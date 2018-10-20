@@ -1,6 +1,6 @@
 <template>
 	<div class="toolbar">
-		<div class="item">
+		<div class="item" @click="handlePlusNotes">
 			<font-icon id="icon-plus"></font-icon>
 		</div>
 	</div>
@@ -12,6 +12,12 @@ export default {
 	data() {
 		return {
 			
+		}
+	},
+	methods: {
+		handlePlusNotes: function(e) {
+			console.log('add notes')
+			this.$store.commit('addNewNotes')
 		}
 	}
 }
