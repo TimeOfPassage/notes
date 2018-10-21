@@ -1,11 +1,11 @@
 <template>
 	<div class="editor">
 		<title class="title" @keyup="handleKeyUp">
-			<input type="text" v-model="getContent.title" value="sfsdfdsf" hidefocus="true" />
+			<input type="text" v-model="curNotes.title" value="" hidefocus="true" />
 		</title>
 		<hr>
 		<content class="content" ref="content" contenteditable="true">
-			{{getContent.content}}
+			{{curNotes.content}}
 		</content>
 	</div>
 </template>
@@ -24,7 +24,7 @@ export default {
 		}
 	},
 	computed: {
-		getContent () {
+		curNotes() {
 			return this.$store.getters.getCurNotes
 		}
 	}
