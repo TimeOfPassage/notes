@@ -32,7 +32,7 @@ export default new Vuex.Store({
 			let newItem = {
 				id:1,
 				title: 'New Item',
-				content:'New Content',
+				content:'',
 				isSelect: true
 			}
 			this.commit('selectSingleNotes',1)

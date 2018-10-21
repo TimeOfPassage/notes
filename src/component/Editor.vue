@@ -4,7 +4,7 @@
 			<input type="text" v-model="getContent.title" value="sfsdfdsf" hidefocus="true" />
 		</title>
 		<hr>
-		<content class="content" contenteditable="true">
+		<content class="content" ref="content" contenteditable="true">
 			{{getContent.content}}
 		</content>
 	</div>
@@ -40,12 +40,6 @@ export default {
 		left:286px;
 		width:auto;
 		height:100%;
-		background: #fff;
-		outline:0;
-		padding:15px;
-		font-size:16px;
-		overflow: hidden;
-		overflow-y: auto;
 		.title{
 			width:auto;
 			height:40px;
@@ -63,10 +57,16 @@ export default {
 			margin-top:0px;
 		}
 		.content{
-			width:100%;
-			height:100%;
 			outline:0;
 			border:0;
+			position: fixed;
+			right:0;
+			top:40px;
+			left:286px;
+			bottom:0px;
+			padding:15px;
+			overflow: hidden;
+			overflow-y: auto;
 		}
 	}
 </style>

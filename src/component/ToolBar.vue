@@ -2,6 +2,9 @@
 	<div class="toolbar">
 		<div class="item" @click="handlePlusNotes">
 			<font-icon id="icon-plus"></font-icon>
+			<span class="total">
+				{{total}}
+			</span>
 		</div>
 	</div>
 </template>
@@ -18,6 +21,11 @@ export default {
 		handlePlusNotes: function(e) {
 			console.log('add notes')
 			this.$store.commit('addNewNotes')
+		}
+	},
+	computed: {
+		total() {
+			return this.$store.getters.getNotesList.length
 		}
 	}
 }
